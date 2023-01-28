@@ -242,14 +242,16 @@ ol {
   background: var(--primary-brandcolor);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  transition-property: background, box-shadow, color;
+  transition-property: background-color, box-shadow, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
 }
 .main-btn:hover,
 .main-btn:focus {
   color: #ffffff;
-  background: var(--text);
+  background-color: #404bbf;
+  /* background: var(--text); */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -557,7 +559,7 @@ ol {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
   position: relative;
@@ -565,11 +567,11 @@ ol {
 
 .subscribe-form {
   display: flex;
- 
 }
-/* .subscribe-name {
-  display: flex; }
-  /* align-items: center; */
+.subscribe-name {
+  display: flex;
+}
+/* align-items: center;
 
 .modal-button-subscribe {
   margin-left: 24px;
@@ -584,9 +586,8 @@ ol {
   width: 264px;
   height: 40px;
   background-color: transparent;
-
+  padding-left: 16px;
 }
-
 
 .subscribe-input::placeholder {
   font-family: "Roboto";
@@ -595,7 +596,7 @@ ol {
   font-size: 12px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
+  /* padding-left: 16px; */
 }
 
 .subscribe-input:focus {
@@ -603,23 +604,15 @@ ol {
   border: 1px solid #4d5ae5;
 }
 
-.icons-subscribe {
-  position: absolute;
- /* margin-right: 50px;
- padding-right: 50px; */
- fill: #31d0aa;
- 
-}
 .subscribe-button {
   display: flex;
   align-items: center;
   justify-content: center;
- position: relative;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   color: #ffffff;
   background-color: #4d5ae5;
   border-radius: 4px;
@@ -627,14 +620,35 @@ ol {
   /* 1px solid #4d5ae5; */
   width: 165px;
   height: 40px;
+  padding: 8px 24px;
+  margin-left: 24px;
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icons-subscribe {
+  /* position: absolute; */
+  /* fill: #31d0aa; */
+  /* margin-left: 135px;
+  /* padding-top: 10px; */
+  /* margin-top: 8px;
+  margin-bottom: 8px;  */
+  right: 0;
+  bottom: 0;
+  margin-left: 16px;
+  /* transform: translate(-50%, -50%); */
+}
+.modal-button-subscribe {
+  display: flex;
+  position: relative;
 }
 .subscribe-button:focus,
-.subscribe-button:hover
- {
+.subscribe-button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
   background-color: #404bbf;
   outline: none;
 }
-
 
 /* =========================Portfolio=================== */
 .portfolio-main {
